@@ -45,10 +45,14 @@ def upload_file():
         sample_pdf=upload_to_gemini(file_path,r' application/pdf' )
         response = model.generate_content([sample_pdf])
         print(response.text)
-        return jsonify("ok"), 200  # Return the response from the Gemini API
+        sample_pdf.delete()
+        os.remove(file_path)
+        return response.text  # Return the response from the Gemini API
+
+
 
     else:
         return jsonify({"error": "File type not allowed"}), 400
 
 if __name__ == '__main__':
-    app.run(debug=True)  # Run the app in debug mode
+    app.run(debug=False)  # Run the app in debug mode

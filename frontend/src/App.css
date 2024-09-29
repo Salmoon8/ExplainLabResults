@@ -36,3 +36,99 @@
     transform: rotate(360deg);
   }
 }
+
+/* src/App.css */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #f4f4f4;
+}
+
+h2 {
+  margin-top: 20px;
+}
+
+h3 {
+  margin-top: 20px;
+}
+
+/* src/App.css */
+body {
+  background-color: #f8f9fa;
+}
+
+.upload-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.upload-form {
+  border: 2px dashed #007bff;
+  border-radius: 5px;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.upload-form.drag-active {
+  background-color: #e9ecef;
+  border-color: #28a745;
+}
+
+.file-input {
+  display: none;
+}
+
+.file-label {
+  display: block;
+  padding: 40px 20px;
+  cursor: pointer;
+  font-size: 18px;
+  color: #6c757d;
+}
+
+.drag-file-element {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.results-card {
+  transition: all 0.3s ease;
+}
+
+.results-card:hover {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.results-table {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.final-comments {
+  background-color: #e9ecef;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  .upload-container {
+    padding: 0 15px;
+  }
+}
